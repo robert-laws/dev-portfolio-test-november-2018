@@ -3,22 +3,13 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
-// html {
-//   font-size: $font-size-base;
-// }
+html {
+  font-size: 62.5%;
+}
 
-// $headings: h6 h5 h4 h3 h2 h1;
-
-// $modular-scale : 3.25;
-// @each $type in $headings{
-//   #{$type} {
-//     font-size : ($font-size-base * $modular-scale);
-//     $modular-scale : $modular-scale + 1;
-//   }
-// }
-
-// p {
-//   font-size: $font-size-base * 3;
-// }
+body {
+  box-sizing: border-box;
+}

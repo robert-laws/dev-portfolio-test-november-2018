@@ -1,5 +1,18 @@
-extends layouts/default.pug
+extends layouts/layout-default.pug
 
 block content
-  h2 Information...
-  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, recusandae?
+  section.project
+    article.project-teaser
+      .description
+        h3 Latest Project
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias qui nostrum quasi pariatur similique eveniet veritatis harum aliquid id sequi.
+      .visual
+        img(src="img/stock-2.jpg")
+
+  section.blog-post
+    article.blog-post-teaser
+      .description
+        h3 Most Recent Blog Post
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aliquam placeat corporis nobis officiis vero.
+      .visual
+        img(src="img/stock-3.jpg")

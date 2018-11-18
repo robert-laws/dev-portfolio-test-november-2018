@@ -1,0 +1,39 @@
+main {
+  max-width: 100hw;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  section {
+    margin: 4rem 0;
+
+  }
+}
+
+article {
+  display: flex;
+  
+  &.project-teaser {
+    flex-direction: row-reverse;
+  }
+
+  &.blog-post-teaser {
+    flex-direction: row;
+  }
+
+  div.description {
+    flex: 1;
+    padding: 3rem;
+    align-self: center;
+  }
+  div.visual {
+    flex: 2;
+  }
+}
+
+.visual {
+  img {
+    width: 100%;
+  }
+}

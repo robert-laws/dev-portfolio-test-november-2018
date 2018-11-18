@@ -4,7 +4,7 @@
   "description": "Development Portfolio - Testing HTML Modules and Sass",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp default",
+    "default": "gulp default",
     "clean": "gulp clean"
   },
   "repository": {
