@@ -1,5 +1,15 @@
-@import "modules/variables";
 
 
+// abstracts - helper functions and non-output code (font-face, global variables, colors, mixins)
+@import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/typography";
 
-@import "partials/base";
+// base - global styles including resets, typography, global tags (ex. body, html)
+@import "base/base";
+
+// components - micro level re-usable components that each do one thing only. Each sass file contains all component styles, variations and states
+
+
+// layouts - unique combinations of components and base styles. Contains component overrides and specific layout attributes
+@import "layouts/header";
