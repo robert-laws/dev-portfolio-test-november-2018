@@ -1,5 +1,6 @@
 main {
-  max-width: 100hw;
+  // max-width: 100hw;
+  max-width: 150rem;
   margin: 0 auto;
 
   display: flex;
@@ -14,6 +15,23 @@ main {
 article {
   display: flex;
   
+  &.intro {
+    width: 100rem;
+    margin: 0 auto;
+    flex-direction: column;
+
+    button {
+      padding: 1.4rem 2.4rem;
+      margin: 1.4rem 0;
+      font-size: 1.6rem;
+      background-color: darken($color-primary, 25%);
+      font-weight: 500;
+      color: #FFF;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
   &.project-teaser {
     flex-direction: row-reverse;
   }
@@ -27,6 +45,7 @@ article {
     padding: 3rem;
     align-self: center;
   }
+  
   div.visual {
     flex: 2;
   }
@@ -35,5 +54,8 @@ article {
 .visual {
   img {
     width: 100%;
+    box-shadow:
+      0 15px 30px 0 rgba(0,0,0,0.11),
+      0 5px 15px 0 rgba(0,0,0,0.08);
   }
 }
