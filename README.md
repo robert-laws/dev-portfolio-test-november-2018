@@ -13,3 +13,5 @@ Testing the development portfolio using Modular HTML and CSS with Pug and Sass
 * components - micro level re-usable components that each do one thing only. Each sass file contains all component styles, variations and states
 
 * layouts - unique combinations of components and base styles. Contains component overrides and specific layout attributes
+
+[Sass Guidelines](https://sass-guidelin.es)
