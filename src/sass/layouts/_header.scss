@@ -14,6 +14,8 @@ header {
   .logo {
     display: flex;
     align-items: flex-start;
+    background-color: $color-white;
+    z-index: 10;
 
     @include sm {
       align-items: center;
@@ -42,6 +44,7 @@ header {
     margin-right: 0.5rem;
     font-size: 1.6rem;
     display: flex;
+    // background-color: #FF0;
 
     @include sm {
       width: 100%;
@@ -58,6 +61,33 @@ header {
       display: inline-block;
       position: relative;
       transition: color 0.25s ease-out 0.1s;
+
+      &:first-child {
+        align-self: flex-end;
+        display: none;
+
+        & ~ .true-link {
+          transition: transform 0.2s linear;
+        }
+
+        @include sm {
+          display: inline-block;
+
+          &:hover ~ .true-link {
+            transform: translateY(0rem);
+          }
+        }        
+      }
+
+      &:not(:first-child) {
+        // display: none;
+        // 
+
+        @include sm {
+          transform: translateY(-25rem);
+          display: inline-block;
+        }        
+      }
 
       @include sm {
         margin: 1rem;
