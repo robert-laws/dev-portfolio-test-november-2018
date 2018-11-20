@@ -29,13 +29,24 @@ article {
 
     button {
       padding: 1.4rem 2.4rem;
-      margin: 1.4rem 0;
+      margin: 1.5rem 0;
       font-size: 1.6rem;
       background-color: darken($color-primary, 25%);
       font-weight: 500;
       color: #FFF;
       border: none;
       cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        box-shadow: 0 0.5rem 1.5rem rgba($color-black, 0.1);
+        transform: translateY(-0.2rem);
+      }
+
+      &:active {
+        box-shadow: 0 0.3rem 1.1rem rgba($color-black, 0.1);
+        transform: translateY(-0.1rem);
+      }
     }
   }
 
