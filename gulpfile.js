@@ -15,6 +15,10 @@ var paths = {
     watch: "src/pug/**/*.pug",
     dest: "build"
   },
+  scripts: {
+    src: "src/js/**/*.js",
+    dest: "build/scripts"
+  },
   images: {
     src: ["src/images/**/*.jpg", "src/images/**/*.JPG", "src/images/**/*.png", "src/images/**/*.ico"],
     dest: "build/img"
@@ -43,6 +47,12 @@ gulp.task("sass", function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task("scripts", function() {
+  return gulp.src(paths.scripts.src)
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browserSync.stream())
+});
+
 gulp.task("images", function() {
   return gulp.src(paths.images.src)
     .pipe(gulp.dest(paths.images.dest))
@@ -60,8 +70,9 @@ gulp.task("watch", function() {
     }
   });
   gulp.watch(paths.styles.src, ["sass"]);
-  gulp.watch(paths.pug.watch, ["pug"])
-  gulp.watch(paths.images.src, ["images"])
+  gulp.watch(paths.pug.watch, ["pug"]);
+  gulp.watch(paths.scripts.src, ["scripts"]);
+  gulp.watch(paths.images.src, ["images"]);
 });
 
-gulp.task("default", ["sass", "pug", "images", "watch"]);
+gulp.task("default", ["sass", "pug", "scripts", "images", "watch"]);
