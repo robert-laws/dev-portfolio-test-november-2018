@@ -35,3 +35,9 @@ $screen-lg-min: 1100px;
     @content;
   }
 }
+
+@mixin rwd-max-min($max-screen, $min-screen) {
+  @media (max-width: $max-screen) and (min-width: $min-screen) {
+    @content;
+  }
+}

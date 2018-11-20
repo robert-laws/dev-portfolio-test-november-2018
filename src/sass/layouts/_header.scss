@@ -2,6 +2,7 @@ header {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 0 2rem;
+  position: relative;
 
   display: flex;
   justify-content: space-between;
@@ -16,13 +17,12 @@ header {
     align-items: flex-start;
     background-color: $color-white;
     z-index: 10;
+    transition: opacity 0.2s ease-in 0.1s;
 
     @include sm {
       align-items: center;
       justify-content: center;
-    }
-
-    transition: opacity 0.2s ease-in 0.1s;
+    }    
 
     &:hover {
       opacity: 0.9;      
@@ -39,11 +39,24 @@ header {
     }
   }
 
+  nav.active-nav {
+    @include sm {
+      display: flex;
+      margin-top: 0rem;
+    }    
+
+    @include rwd-max-min(100rem, $screen-sm-min) {
+      display: flex !important;
+      margin-top: 0rem;
+    }
+  }
+
   nav {
     align-self: center;
     margin-right: 0.5rem;
     font-size: 1.6rem;
     display: flex;
+    transition: margin-top 1s cubic-bezier(0.17, 0.04, 0.03, 0.94);
     // background-color: #FF0;
 
     @include sm {
@@ -51,6 +64,7 @@ header {
       flex-direction: column;
       align-items: center;
       margin-right: 0px;
+      margin-top: -20rem;
     }
     
     a {
@@ -62,32 +76,32 @@ header {
       position: relative;
       transition: color 0.25s ease-out 0.1s;
 
-      &:first-child {
-        align-self: flex-end;
-        display: none;
+      // &:first-child {
+      //   align-self: flex-end;
+      //   display: none;
 
-        & ~ .true-link {
-          transition: transform 0.2s linear;
-        }
+      //   & ~ .true-link {
+      //     transition: transform 0.2s linear;
+      //   }
 
-        @include sm {
-          display: inline-block;
+      //   @include sm {
+      //     display: inline-block;
 
-          &:hover ~ .true-link {
-            transform: translateY(0rem);
-          }
-        }        
-      }
+      //     &:hover ~ .true-link {
+      //       transform: translateY(0rem);
+      //     }
+      //   }        
+      // }
 
-      &:not(:first-child) {
-        // display: none;
-        // 
+      // &:not(:first-child) {
+      //   // display: none;
+      //   // 
 
-        @include sm {
-          transform: translateY(-25rem);
-          display: inline-block;
-        }        
-      }
+      //   @include sm {
+      //     transform: translateY(-25rem);
+      //     display: inline-block;
+      //   }        
+      // }
 
       @include sm {
         margin: 1rem;
@@ -109,6 +123,26 @@ header {
           width: 100%;
         }
       }
+    }
+  }
+}
+
+#navbar-toggle {
+  display: none;
+
+  @include sm {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    color: rbga($color-black, 0.8);
+    font-size: 2.5rem;
+    z-index: 200;
+    transition: color 0.2s;
+
+    &:hover {
+      color: rgba($color-black, 1);
     }
   }
 }
