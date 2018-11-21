@@ -75,4 +75,6 @@ gulp.task("watch", function() {
   gulp.watch(paths.images.src, ["images"]);
 });
 
+gulp.task("build", ["sass", "pug", "scripts", "images"]);
+
 gulp.task("default", ["sass", "pug", "scripts", "images", "watch"]);

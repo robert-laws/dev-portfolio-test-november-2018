@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "default": "gulp default",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
