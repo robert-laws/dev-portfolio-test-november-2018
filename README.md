@@ -14,4 +14,24 @@ Testing the development portfolio using Modular HTML and CSS with Pug and Sass
 
 * layouts - unique combinations of components and base styles. Contains component overrides and specific layout attributes
 
-[Sass Guidelines](https://sass-guidelin.es)
+[Best Practices - Sass Guidelines](https://sass-guidelin.es)
+
+## BEM Methodology
+
+Block, Element, Modifier (BEM) is a naming convention for classes in HTML and CSS. The idea is to make the relationship between HTML elements & built components and the CSS more clear.
+
+#### BEM Example
+
+```css
+/* BLOCK COMPONENT */
+.btn {}
+
+/* ELEMENT THAT DEPENDS ON THE BLOCK */
+.btn__price {}
+
+/* MODIFIERS THAT CHANGE THE STYLE OF THE BLOCK */
+.btn__price--orange {}
+.btn__price--big {}
+```
+
+
