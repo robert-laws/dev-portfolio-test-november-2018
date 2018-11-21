@@ -1,0 +1,65 @@
+.x-box {
+  margin: 20px;
+  width: 150px;
+  height: 100px;
+  background-color: #EEE;
+  position: relative;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: rotate(45deg);
+    
+  }
+
+
+  .box {
+    @extend %box-size;
+  }
+
+  &--top {
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    transition: all 0.4s;
+    
+    
+    &:hover {
+      
+    }
+  }
+
+  &--middle--1 {
+    top: 50px;
+    left: 0px;
+    transition: all 0.4s;
+
+    // &:hover {
+    //   transform: rotate(45deg);
+    //   transform-origin: 50% 50%;
+    // }
+  }
+
+  &--middle--2 {
+    top: 50px;
+    left: 0px;
+    transition: all 0.4s;
+
+    // &:hover {
+    //   transform: rotate(-45deg);
+    //   transform-origin: 50% 50%;
+    // }
+  }
+
+  &--bottom {
+    top: 100px;
+    left: 0px;
+  }
+}
+
+%box-size {
+  width: 150px;
+  height: 10px;
+  position: absolute;
+  overflow: visible;
+  background-color: #000;
+}
