@@ -1,0 +1,44 @@
+.project {
+  $self: &;
+  border: 1px solid #19A;
+
+  header {
+    border: 1px solid #19A;
+
+    #{$self}__title {
+      color: red;
+    }
+
+    #{$self}__tagline {
+      color: blue;
+    }
+
+    #{$self}__date {
+      color: blue;
+    }
+
+    #{$self}__tech-stack {
+      color: blue;
+    }
+  }
+
+  section {
+    border: 1px solid #19A;
+
+    #{$self}__description {
+      color: red;
+    }
+  }
+
+  figure {
+    border: 1px solid #19A;
+    
+    #{$self}__image {
+      width: 200px;
+    }
+  
+    #{$self}__caption {
+      color: red;
+    }
+  }
+}
