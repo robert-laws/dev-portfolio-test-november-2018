@@ -1,13 +1,17 @@
 extends layouts/layout-default.pug
 
 block content
-  section.introduction
-    article.intro
-      h1 Welcome to the website
-      h2 Site Tagline
-      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam nam praesentium optio numquam deleniti voluptate, porro eum earum aspernatur harum iusto corporis?
-      .callout
-        button Click Here
+  section.hero
+    .hero__welcome
+      h1 Robert Laws
+      h2 Web/UX/Designer
+      p Apiring web developer who also dabbles in web & UX design. Searching for new challenges and always pushing my limits.
+      .hero__callout
+        .hero__button
+          button Contact
+        .hero__portrait
+          img(src="img/rdl.jpg")
+    .hero__image
 
   section.project-preview
     h3 Latest Project

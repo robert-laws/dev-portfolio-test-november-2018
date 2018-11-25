@@ -7,7 +7,7 @@ var browserSync = require("browser-sync").create();
 
 var paths = {
   styles: {
-    src: "src/sass/**/*",
+    src: "src/sass/**/*.scss",
     dest: "build/styles"
   },
   pug: {
