@@ -1,0 +1,52 @@
+.blog-post {
+  margin: 4rem 0;
+
+  @include sm {
+    margin: 1rem;
+  }
+
+  & > h3 {
+    text-align: right;
+    margin: 0 2rem 2rem 0;
+    font-size: 3rem;
+
+    @include lg {
+      text-align: left;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  &__teaser {
+    display: flex;
+    flex-direction: row;
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    flex: 1;
+    padding: 0 3rem;
+    align-self: flex-start;
+
+    h3 {
+      color: $color-wet-asphalt;
+    }
+  }
+
+  &__visual {
+    flex: 2;
+
+    @include lg {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+      box-shadow:
+        0 15px 30px 0 rgba(0,0,0,0.11),
+        0 5px 15px 0 rgba(0,0,0,0.08);
+    }
+  }
+}

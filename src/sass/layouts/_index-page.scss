@@ -1,7 +1,6 @@
 main {
-  // max-width: 100hw;
-  // max-width: 150rem;
-  // margin: 0 auto;
+  max-width: 150rem;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -11,120 +10,6 @@ main {
 
     @include sm {
       margin: 1rem;
-    }
-  }
-}
-
-article {
-  display: flex;
-  
-  &.intro {
-    width: 100rem;
-    margin: 0 auto;
-    flex-direction: column;
-
-    @include sm {
-      width: 100%;
-    }
-
-    button {
-      padding: 1.4rem 2.4rem;
-      margin: 1.5rem 0;
-      font-size: 1.6rem;
-      background-color: darken($color-primary, 25%);
-      font-weight: 500;
-      color: #FFF;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s linear;
-
-      &:hover {
-        box-shadow: 0 0.5rem 1.5rem rgba($color-black, 0.1);
-        transform: translateY(-0.2rem);
-      }
-
-      &:active {
-        box-shadow: 0 0.3rem 1.1rem rgba($color-black, 0.1);
-        transform: translateY(-0.1rem);
-      }
-    }
-  }
-
-  &.blog-post-teaser {
-    flex-direction: row;
-  }
-}
-
-.project-preview {
-  padding: 10rem 0;
-
-  @include sm {
-    margin: 1rem;
-  }
-
-  & > h3 {
-    text-align: left;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
-  }
-
-  &__teaser {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  &__description {
-    flex: 1;
-    padding: 0 3rem;
-    align-self: flex-start;
-  }
-
-  &__visual {
-    flex: 1;
-
-    img {
-      width: 100%;
-      box-shadow:
-        0 15px 30px 0 rgba(0,0,0,0.11),
-        0 5px 15px 0 rgba(0,0,0,0.08);
-    }
-  }
-}
-
-.blog-post {
-  margin: 4rem 0;
-
-  @include sm {
-    margin: 1rem;
-  }
-
-  & > h3 {
-    text-align: right;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
-  }
-
-  &__teaser {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__description {
-    flex: 1;
-    padding: 0 3rem;
-    align-self: flex-start;
-  }
-
-  &__visual {
-    flex: 2;
-
-    img {
-      width: 100%;
-      box-shadow:
-        0 15px 30px 0 rgba(0,0,0,0.11),
-        0 5px 15px 0 rgba(0,0,0,0.08);
     }
   }
 }

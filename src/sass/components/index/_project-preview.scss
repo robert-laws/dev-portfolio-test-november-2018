@@ -1,0 +1,75 @@
+.project-preview {
+  padding: 10rem 0;
+
+  @include sm {
+    margin: 1rem;
+  }
+
+  & > h3 {
+    text-align: left;
+    margin: 0 0 2rem 2rem;
+    font-size: 3rem;
+
+    @include lg {
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  &__teaser {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    flex: 1;
+    padding: 0 3rem;
+    align-self: flex-start;
+
+    h3 {
+      color: $color-wet-asphalt;
+    }
+
+    .metadata {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+
+      time {
+        color: $color-secondary;
+        font-weight: 500;
+      }
+
+      .tech-stack {
+        color: $color-wet-asphalt;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 2rem;
+      }
+    }
+
+    p:last-child {
+      
+      @include lg {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__visual {
+    flex: 2;
+
+    @include lg {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+      box-shadow:
+        0 15px 30px 0 rgba(0,0,0,0.11),
+        0 5px 15px 0 rgba(0,0,0,0.08);
+    }
+  }
+}
