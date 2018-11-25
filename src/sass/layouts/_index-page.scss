@@ -7,7 +7,7 @@ main {
   flex-direction: column;
 
   section {
-    margin: 4rem 0;
+    margin: 2rem 0;
 
     @include sm {
       margin: 1rem;
@@ -56,10 +56,17 @@ article {
 }
 
 .project-preview {
-  margin: 4rem 0;
+  padding: 10rem 0;
 
   @include sm {
     margin: 1rem;
+  }
+
+  & > h3 {
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
   }
 
   &__teaser {
@@ -69,12 +76,12 @@ article {
 
   &__description {
     flex: 1;
-    padding: 3rem;
-    align-self: center;
+    padding: 0 3rem;
+    align-self: flex-start;
   }
 
   &__visual {
-    flex: 2;
+    flex: 1;
 
     img {
       width: 100%;
@@ -92,6 +99,13 @@ article {
     margin: 1rem;
   }
 
+  & > h3 {
+    text-align: right;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+  }
+
   &__teaser {
     display: flex;
     flex-direction: row;
@@ -99,8 +113,8 @@ article {
 
   &__description {
     flex: 1;
-    padding: 3rem;
-    align-self: center;
+    padding: 0 3rem;
+    align-self: flex-start;
   }
 
   &__visual {
