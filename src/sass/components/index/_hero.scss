@@ -2,8 +2,12 @@
   display: flex;
   margin-top: 2rem;
 
-  &__welcome {
+  &__sideline {
     flex: 1;
+  }
+
+  &__welcome {
+    flex: 2;
     align-self: flex-start;
 
     h1 {
@@ -61,8 +65,8 @@
   }
 
   &__image {
+    flex: 4;
     position: relative;
-    flex: 2;
     height: 50rem;
 
     background-image: 

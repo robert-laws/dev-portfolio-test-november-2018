@@ -1,5 +1,7 @@
 .blog-post {
-  margin: 4rem 0;
+  padding: 20rem 0;
+  background-color: lighten($color-primary, 30%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
 
   @include sm {
     margin: 1rem;
@@ -25,8 +27,17 @@
     }
   }
 
+  &__sideline {
+    &--left {
+      flex: 1;
+    }
+    &--right {
+      flex: 0;
+    }
+  }
+
   &__description {
-    flex: 1;
+    flex: 2;
     padding: 0 3rem;
     align-self: flex-start;
 
@@ -36,7 +47,7 @@
   }
 
   &__visual {
-    flex: 2;
+    flex: 4;
 
     @include lg {
       flex: 1;

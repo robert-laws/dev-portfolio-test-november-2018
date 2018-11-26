@@ -2,6 +2,7 @@ extends layouts/layout-default.pug
 
 block content
   section.hero
+    .hero__sideline
     .hero__welcome
       h1 Robert Laws
       h2 Web/UX/Designer
@@ -12,10 +13,11 @@ block content
         .hero__portrait
           img(src="img/rdl.jpg")
     .hero__image
+    .hero__sideline
 
   section.project-preview
-    h3 Latest Project
     article.project-preview__teaser
+      .project-preview__sideline--left
       .project-preview__description
         h3 Developer Portfolio
         p Easy hosting and content creation
@@ -25,15 +27,17 @@ block content
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias qui nostrum quasi pariatur similique eveniet veritatis harum aliquid id sequi.
       .project-preview__visual
         img(src="img/stock-2.jpg")
+      .project-preview__sideline--right
 
   section.blog-post
-    h3 Latest Blog Post
     article.blog-post__teaser
+      .blog-post__sideline--left
       .blog-post__description
         h3 Pug (Jade) for Quick HTML
         p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aliquam placeat corporis nobis officiis vero.
       .blog-post__visual
         img(src="img/stock-3.jpg")
+      .blog-post__sideline--right
 
   //- +projectPreview('Dog Daycare', 'Online reservations', 'May 2018', 'Ruby on Rails', 'img/as-small.jpg', 'project image')
   //-   | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tempore, dolorem omnis aspernatur temporibus quaerat totam sunt facilis sapiente dolore.
