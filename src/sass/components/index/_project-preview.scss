@@ -1,6 +1,9 @@
 .project-preview {
   padding: 20rem 0;
   background-color: lighten($color-primary-light, 40%);
+  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+  -moz-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+  -ms-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
 
   @include sm {
@@ -83,4 +86,149 @@
         0 5px 15px 0 rgba(0,0,0,0.08);
     }
   }
+}
+
+section.splash--right {
+  @include splash-left-wide; // clip-path wider on right
+}
+
+.project-brief {
+  $self: &;
+  display: flex;
+
+  &__text {
+    flex: 2;
+    padding: 0 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      margin-bottom: 1rem;
+      color: $color-white;
+    }
+
+    #{$self}__header {
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        flex: 1;
+        text-align: left;
+
+        h3 {
+          font-size: 2.8rem;
+          color: $color-wet-asphalt;
+        }
+      }
+      
+      .date {
+        flex: 1;
+        align-self: center;
+        text-align: right;
+
+        time {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    #{$self}__description {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    #{$self}__features {
+      h4 {
+        color: lighten($color-wet-asphalt, 5%);
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+
+      ul {
+        margin-left: 3rem;
+        list-style-type: circle;
+
+        li {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    #{$self}__technologies {
+      h4 {
+        color: lighten($color-wet-asphalt, 5%);
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+
+      a {
+        display: inline-block;
+        color: $color-white;
+        text-decoration: none;
+        font-size: 1.25rem;
+        padding: 0.6rem 1.8rem;
+        margin: 0.4rem;
+
+        &,
+        &:link,
+        &:visited {
+          background-color: $color-primary-medium;
+        }
+
+        &:hover,
+        &:active {
+          background-color: $color-primary-dark;
+        }
+      }      
+    }
+
+    #{$self}__link {
+      align-self: flex-end;
+      
+      a {
+        display: inline-block;
+        color: $color-white;
+        border: 1px solid rgba($color-white, 0.7);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        margin: 1rem 0 0;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, 0.1), 0 0.5rem 1.5rem rgba($color-black, 0.1);
+
+        &,
+        &:link,
+        &:visited {
+          background-color: $color-primary-light;
+        }
+
+        &:hover,
+        &:active {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 4;
+    order: $splash-image-left-side;
+
+    img {
+      width: 100%;
+      box-shadow:
+        0 15px 30px 0 rgba(0,0,0,0.11),
+        0 5px 15px 0 rgba(0,0,0,0.08);
+    }
+  }
+
+  @include sideline-left-wide($self); // adjust sideline size to 0 for right wide
 }

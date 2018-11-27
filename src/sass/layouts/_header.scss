@@ -1,5 +1,5 @@
 header {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 0 2rem;
   position: relative;
@@ -17,7 +17,8 @@ header {
     align-items: flex-start;
     padding-top: 1rem;
     background-color: $color-white;
-    z-index: 10;    
+    z-index: 10;
+    
 
     @include sm {
       align-items: center;
@@ -31,10 +32,11 @@ header {
     img {
       padding: 1rem;
       height: 75px;
-      transition: opacity 0.2s ease-in 0.1s;
+      transition: all 0.2s ease-in 0.1s;
 
       &:hover {
         opacity: 0.9;
+        // filter: drop-shadow(1px 1px 8px rgba($color-wet-asphalt, 0.4)); 
       }
     }
   }
