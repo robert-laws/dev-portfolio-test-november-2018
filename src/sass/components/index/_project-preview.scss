@@ -97,7 +97,7 @@ section.splash--right {
   display: flex;
 
   &__text {
-    flex: 2;
+    flex: 3;
     padding: 0 3rem;
 
     display: flex;
@@ -109,6 +109,7 @@ section.splash--right {
     }
 
     #{$self}__header {
+      flex: 0 1 50px;
       display: flex;
       justify-content: space-between;
 
@@ -128,18 +129,20 @@ section.splash--right {
         text-align: right;
 
         time {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
         }
       }
     }
 
     #{$self}__description {
+      flex: 0 1 50px;
       p {
         font-size: 1.6rem;
       }
     }
 
     #{$self}__features {
+      flex: 0 1 50px;
       h4 {
         color: lighten($color-wet-asphalt, 5%);
         font-size: 2rem;
@@ -160,6 +163,7 @@ section.splash--right {
     }
 
     #{$self}__technologies {
+      flex: 0 1 50px;
       h4 {
         color: lighten($color-wet-asphalt, 5%);
         font-size: 2rem;
@@ -191,6 +195,7 @@ section.splash--right {
     }
 
     #{$self}__link {
+      flex: 0 1 50px;
       align-self: flex-end;
       
       a {
@@ -201,7 +206,7 @@ section.splash--right {
         text-transform: uppercase;
         font-size: 1.6rem;
         padding: 1rem 2rem;
-        margin: 1rem 0 0;
+        margin: 3rem 0 0;
         box-shadow: 0 1.5rem 3rem rgba($color-black, 0.1), 0 0.5rem 1.5rem rgba($color-black, 0.1);
 
         &,

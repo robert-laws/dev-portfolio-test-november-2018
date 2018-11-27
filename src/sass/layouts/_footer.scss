@@ -14,10 +14,10 @@
 
   &__container--bottom {
     flex: 1;
-    background-color: $color-white;
+    background-color: lighten($color-wet-asphalt, 12%);
     padding: 20px;
     text-align: center;
-    color: $color-wet-asphalt;
+    color: $color-white;
   }
 
   &__section {

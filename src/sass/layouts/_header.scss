@@ -1,11 +1,15 @@
 header {
-  max-width: 140rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 0 2rem;
   position: relative;
 
   display: flex;
   justify-content: space-between;
+
+  @include lg {
+    max-width: 100rem;
+  }
 
   @include sm {
     flex-direction: column;
@@ -31,8 +35,12 @@ header {
 
     img {
       padding: 1rem;
-      height: 75px;
+      height: 9rem;
       transition: all 0.2s ease-in 0.1s;
+
+      @include sm {
+        height: 7.5rem;
+      }
 
       &:hover {
         opacity: 0.9;
