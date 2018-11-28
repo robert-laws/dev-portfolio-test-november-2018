@@ -88,10 +88,6 @@
   }
 }
 
-section.splash--right {
-  @include splash-left-wide; // clip-path wider on right
-}
-
 .project-brief {
   $self: &;
   display: flex;
@@ -109,7 +105,7 @@ section.splash--right {
     }
 
     #{$self}__header {
-      flex: 0 1 50px;
+      flex: 0 1 auto;
       display: flex;
       justify-content: space-between;
 
@@ -135,14 +131,14 @@ section.splash--right {
     }
 
     #{$self}__description {
-      flex: 0 1 50px;
+      flex: 0 1 auto;
       p {
         font-size: 1.6rem;
       }
     }
 
     #{$self}__features {
-      flex: 0 1 50px;
+      flex: 0 1 auto;
       h4 {
         color: lighten($color-wet-asphalt, 5%);
         font-size: 2rem;
@@ -163,7 +159,7 @@ section.splash--right {
     }
 
     #{$self}__technologies {
-      flex: 0 1 50px;
+      flex: 0 1 auto;
       h4 {
         color: lighten($color-wet-asphalt, 5%);
         font-size: 2rem;
