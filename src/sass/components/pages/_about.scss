@@ -1,0 +1,57 @@
+.about {
+  $self: &;
+  display: flex;
+
+  &__sideline {
+    flex: 2;
+
+    @include lg {
+      flex: 0;
+    }
+  }
+
+  &__content {
+    flex: 6;
+
+    @include xl {
+      flex: 12;
+    }
+
+    @include lg {
+      margin: 0 5rem;
+    }
+
+    @include md {
+      margin: 0 3rem;
+    }
+
+    @include sm {
+      margin: 0 1rem;
+    }
+
+    #{$self}__header {
+      h1 {
+        color: $color-wet-asphalt;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    #{$self}__text {
+      p {
+        margin-bottom: 2rem;
+      }
+
+      h4 {
+        color: $color-wet-asphalt;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-top: 1rem;
+        margin: 3rem 0 1rem;
+        border-top: 1px solid lighten(#555, 37%);
+      }
+    }
+
+    
+  }
+}

@@ -1,14 +1,22 @@
 .hero {
   display: flex;
-  margin-top: 2rem;
 
   &__sideline {
     flex: 1;
+
+    @include xl {
+      flex: 0;
+    }
   }
 
   &__welcome {
     flex: 2;
     align-self: flex-start;
+    padding-left: 0;
+
+    @include xl {
+      padding-left: 2rem;
+    }
 
     h1 {
       color: $color-wet-asphalt;

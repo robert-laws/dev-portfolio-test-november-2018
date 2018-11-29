@@ -12,9 +12,14 @@
 // components - micro level re-usable components that each do one thing only. Each sass file contains all component styles, variations and states
 @import "components/x-animate";
 @import "components/project-preview-pug";
+
+// components - index page
 @import "components/index/hero";
 @import "components/index/project-preview";
 @import "components/index/blog-post-preview";
+
+// components - pages
+@import "components/pages/about";
 
 // layouts - unique combinations of components and base styles. Contains component overrides and specific layout attributes
 @import "layouts/header";
