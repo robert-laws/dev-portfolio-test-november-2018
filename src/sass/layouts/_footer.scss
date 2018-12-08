@@ -50,6 +50,11 @@
       flex: 1;
       color: $color-white;
       text-align: left;
+      margin-top: 1.5rem;
+
+      & > *:not(:first-child) {
+        margin-left: 0.5rem;
+      }
 
       @include sm {
         flex: 1 0 60%;
