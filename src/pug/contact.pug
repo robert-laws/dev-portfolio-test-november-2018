@@ -1,0 +1,23 @@
+extends layouts/layout-default.pug
+
+block content
+  section.contact
+    .contact__sideline
+    .contact__content
+      .contact__header
+        h1 Contact
+        p Get in touch with questions, queries, or opportunities
+      .contact__form
+        form(id="contact-form" action="#" method="post")
+          .contact__form-input-wrap.validate-input(data-validate="Name is required")
+            input(type="text" name="name" placeholder="Full Name" tabindex="1" autofocus required).contact__form-input-field
+          .contact__form-input-wrap.validate-input(data-validate="Email is required")
+            input(type="text" name="email" placeholder="Email Address" tabindex="2" required).contact__form-input-field
+          .contact__form-input-wrap.validate-input(data-validate="Comment is requried")
+            textarea(name="comments" placeholder="Your Comments" tabindex="3" required).contact__form-input-field
+          .contact__form-button-wrap
+            button.contact__form-button Send Email
+
+
+    .contact__sideline
+
