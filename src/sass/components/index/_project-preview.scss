@@ -1,9 +1,6 @@
 .project-preview {
   padding: 20rem 0;
   background-color: lighten($color-primary-light, 40%);
-  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
-  -moz-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
-  -ms-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
 
   @include sm {

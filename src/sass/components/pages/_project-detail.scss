@@ -1,49 +1,20 @@
 .project-detail {
   padding: 7rem 0;
   background-color: lighten($color-primary-dark, 79%);
-  -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
-  -moz-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
-  -ms-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
-  clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
+  clip-path: polygon(0% 0%, 100% 3%, 100% 97%, 0% 100%);
+
+  position: relative;
 
   $self: &;
   display: flex;
 
   &__sideline {
     flex: 2;
+    display: flex;
 
     @include lg {
       flex: 0;
-    }
-
-    #{$self}__side-nav {
-      background-color: rgba($color-primary-light, 0.05);
-      border-radius: 2px;
-      margin: 10rem 5rem 0;
-      padding: 1rem;
-
-      h3 {
-        color: $color-primary-light;
-      }
-
-      ul {
-        list-style-type: none;
-
-        li {
-          margin: 1rem 0;
-
-          a {
-            text-decoration: none;
-            font-size: 1.5rem;
-          }
-
-          a:link,
-          a:visited {
-            color: $color-wet-asphalt;
-          }
-        }
-      }
-    }
+    }    
   }
 
   &__content {
@@ -142,6 +113,40 @@
           padding: 0.9rem 1rem 0.8rem;
           margin-top: -5px;
         }
+      }
+    }
+  }
+}
+
+aside.project-detail__side-nav {
+  top: 10rem;
+  position: sticky;
+
+  height: 30rem;
+
+  background-color: rgba($color-primary-light, 0.05);
+  border-radius: 5px;
+  margin: 10rem 5rem 0;
+  padding: 1rem;
+
+  h3 {
+    color: $color-primary-light;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin: 1rem 0;
+
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      a:link,
+      a:visited {
+        color: $color-wet-asphalt;
       }
     }
   }

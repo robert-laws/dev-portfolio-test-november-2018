@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var pug = require("gulp-pug");
 var sass = require("gulp-sass");
+var prefix = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var del = require("del");
 var browserSync = require("browser-sync").create();
@@ -25,6 +26,14 @@ var paths = {
   }
 }
 
+var sassOptions = {
+  outputStyle: "expanded"
+};
+
+var prefixerOptions = {
+  browsers: ['last 2 versions']
+};
+
 gulp.task("pug", function() {
   return gulp.src(paths.pug.src)
     .pipe(pug({
@@ -37,11 +46,8 @@ gulp.task("pug", function() {
 gulp.task("sass", function() {
   return gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
-    .pipe(sass(
-      {
-        outputStyle: "expanded"
-      }
-    ).on("error", sass.logError))
+    .pipe(sass(sassOptions).on("error", sass.logError))
+    .pipe(prefix(prefixerOptions))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());

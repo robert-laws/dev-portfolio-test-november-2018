@@ -1,9 +1,6 @@
 .blog-post {
   padding: 7rem 0;
   background-color: lighten($color-primary-dark, 79%);
-  -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
-  -moz-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
-  -ms-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
   clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0% 97%);
 
   $self: &;
