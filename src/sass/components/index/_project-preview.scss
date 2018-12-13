@@ -146,10 +146,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-top: 1rem;
+        margin-left: 1rem;
       }
 
       ul {
-        margin-left: 3rem;
+        margin-left: 4rem;
         list-style-type: circle;
 
         li {
@@ -167,12 +168,14 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-top: 1rem;
+        margin-left: 1rem;
       }
     }
 
     #{$self}__technologies-links {
       flex: 0 1 50px;
       align-self: flex-start;
+      margin-left: 1rem;
 
       a {
         display: inline-block;
