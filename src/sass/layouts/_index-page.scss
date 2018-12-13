@@ -5,7 +5,7 @@ main {
   display: flex;
   flex-direction: column;
 
-  section {
+  & > section {
     margin: 3rem 0;
 
     @include sm {
